@@ -1,85 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto',sans-serif;
+body{
+  margin: 0;
+  padding: 0;
+ 
 }
-.view1{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    min-width: 1300px;
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
+.btn{
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 14px;
+  font-family: "montserrat";
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #ff7675;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
 }
-nav p{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    text-decoration: underline;
+
+.btn::before{
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
 }
-nav > p,header{
-    margin-left: 40px;
+
+.btn1::before{
+  width: 0%;
+  height: 100%;
 }
-li{
-    font-size: 18px;
-    display: inline-block;
-    padding: 0 25px;
-    cursor: pointer;
-    transition: 0.4s ease 0s;
-    font-weight: 500;
+
+.btn1:hover::before{
+  width: 100%;
 }
-li:hover{
-    color: rgba(0, 153, 255,1);
+
+
+
+
+
+.btn2::before{
+  width: 100%;
+  height: 0%;
 }
-header{
-    position: absolute;
-    width: 400px;
-    top: 35%;
+.btn2:hover::before{
+  height: 100%;
 }
-h1{
-    line-height: 75px;
-    font-weight: 500;
-    font-size: 64px;
-    font-style: normal;
+
+.btn3::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(45deg);
 }
-header p{
-    width: 757px;
-    height: 70px;
-    font-size: 18px;
-    font-style: normal;
-    line-height: 21px;
-    font-weight: 500;
-    margin-bottom: 10px;
+.btn3:hover::before{
+  height: 380%;
 }
-header button{
-    background-color:rgba(0, 153, 255,1) ;
-    width: 150px;
-    height: 40px;
-    border: 0;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 28px;
-    font-style: normal;
-    color: #fff;
-    transition: 0.4s ease 0s;
+
+.btn4::before{
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%,-50%) rotate(-45deg);
 }
-header button:hover{
-    box-shadow: 1px 1px 7px #333;
-}
-.wave{
-    position: absolute;
-    bottom: 0;
-}
-.ilustracion{
-    position: absolute;
-    width: 632px;
-    height: 436px;
-    right: 0;
-    transform: translateY(30px);
+.btn4:hover::before{
+  height: 380%;
 }
